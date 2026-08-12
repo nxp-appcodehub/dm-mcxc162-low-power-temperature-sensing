@@ -6,11 +6,11 @@
  * Generated linker script file for MCXC162
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Jul 23, 2026, 2:46:48 PM
+ * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Jul 23, 2026, 3:32:44 PM
  */
 
-INCLUDE "dm-mcxc162-low-power-presence-detection_Debug_library.ld"
-INCLUDE "dm-mcxc162-low-power-presence-detection_Debug_memory.ld"
+INCLUDE "dm-mcxc162-low-power-temperature-sensing_Debug_library.ld"
+INCLUDE "dm-mcxc162-low-power-temperature-sensing_Debug_memory.ld"
 
 ENTRY(ResetISR)
 
@@ -58,59 +58,8 @@ SECTIONS
        *(.text*)
        *(.rodata .rodata.* .constdata .constdata.*)
        . = ALIGN(4);
-            /* C++ constructors etc */
-            . = ALIGN(4);
-            KEEP(*(.init))
-            
-            . = ALIGN(4);
-            __preinit_array_start = .;
-            KEEP (*(.preinit_array))
-            __preinit_array_end = .;
-            
-            . = ALIGN(4);
-            __init_array_start = .;
-            KEEP (*(SORT(.init_array.*)))
-            KEEP (*(.init_array))
-            __init_array_end = .;
-            
-            KEEP(*(.fini));
-            
-            . = ALIGN(4);
-            KEEP (*crtbegin.o(.ctors))
-            KEEP (*(EXCLUDE_FILE (*crtend.o) .ctors))
-            KEEP (*(SORT(.ctors.*)))
-            KEEP (*crtend.o(.ctors))
-            
-            . = ALIGN(4);
-            KEEP (*crtbegin.o(.dtors))
-            KEEP (*(EXCLUDE_FILE (*crtend.o) .dtors))
-            KEEP (*(SORT(.dtors.*)))
-            KEEP (*crtend.o(.dtors))
-            . = ALIGN(4);
-            /* End C++ */
     } > PROGRAM_FLASH
-    /* 
-    .tof_bin_image :
-    {
-    . = ALIGN(4);
-    KEEP(*(.tof_bin_image))
-    KEEP(*(.tof_bin_image.*))
-    . = ALIGN(4);
-    } > DATA_FLASH
-    * 
-
     
-    .g_resc_ctrl_table :
-    {
-    . = ALIGN(4);
-    KEEP(*(.g_resc_ctrl_table))
-    KEEP(*(.g_resc_ctrl_table.*))
-    . = ALIGN(4);
-    } > DATA_FLASH
-    *     
-    */
-
-
     
     /*
      * for exception handling/unwind - some Newlib functions (in common

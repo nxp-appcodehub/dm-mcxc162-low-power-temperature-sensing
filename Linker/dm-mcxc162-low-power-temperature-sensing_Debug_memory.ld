@@ -6,7 +6,7 @@
  * Generated linker script file for MCXC162
  * Created from memory.ldt by FMCreateLinkMemory
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Jul 23, 2026, 2:46:48 PM
+ * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Jul 23, 2026, 3:32:44 PM
  */
 
 MEMORY

@@ -6,17 +6,12 @@
  * Generated linker script file for MCXC162
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Jul 23, 2026, 2:46:48 PM
+ * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Jul 23, 2026, 3:32:44 PM
  */
 
 GROUP (
+  "libcr_nohost_nf.a"
+  "libcr_c.a"
+  "libcr_eabihelpers.a"
   "libgcc.a"
-  "libc_nano.a"
-  "libstdc++_nano.a"
-  "libm.a"
-  "libcr_newlib_semihost.a"
-  "crti.o"
-  "crtn.o"
-  "crtbegin.o"
-  "crtend.o"
 )
