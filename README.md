@@ -25,10 +25,10 @@ The P3T1755 is a temperature-to-digital converter from -40 °C to +125 °C range
 7. [Release Notes](#step7)
 
 ## 1. Software<a name="step1"></a>
-- Download and install [MCUXpresso IDE V25.06 or later](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE).
-- Download MCU SDK:[SDK_26_06_00_FRDM-MCXC162](https://mcuxpresso.nxp.com/en/welcome)
-- Download the code from Git repository dm-mcxc162-low-power-presence-detection<!--[dm-mcxc162-low-power-presence-detection](https://github.com/nxp-appcodehub/dm-mcxc162-low-power-presence-detection)-->.  
-- MCUXpresso for Visual Studio Code: This example supports MCUXpresso for Visual Studio Code, for more information about how to use Visual Studio Code please refer [here](https://www.nxp.com/design/training/getting-started-with-mcuxpresso-for-visual-studio-code:TIP-GETTING-STARTED-WITH-MCUXPRESSO-FOR-VS-CODE).
+- Download and install [VS Code V1.133 or later](https://code.visualstudio.com/).
+- Download MCUXpresso for VS Code Plugin 26.7.52 or later.
+- Download MCU SDK: [SDK_26_06_00_FRDM-MCXC162](https://mcuxpresso.nxp.com/en/welcome) (Optional)
+
 
 ## 2. Hardware<a name="step2"></a>
 - FRDM-MCXC162
@@ -43,20 +43,21 @@ The P3T1755 is a temperature-to-digital converter from -40 °C to +125 °C range
 4. Select the example, update the name and select the directory where the example will be saved.
 5. Click on the import project and wait some minutes.
 6. Add the toolchain: Arm GNU
-7. Now, the projects of demo should be in projects panel.
-8. Now you should have the “dm-mcxc162-low-power-temperature-sensing” in your workspace.
+7. Now you should have the “mcxc162-low-power-temperature-sensing” in your projects panel.
 
-### 3.2 Prepare FRDM and Shield boards
+### 3.2 Prepare FRDM board
 1. Connect FRDM board to computer with USB-C cable in MCU-Link port of FRDM.
-2. Open MCUXpresso extension in VSCode.
-3. Select the project "dm-mcxc162-low-power-temperature-sensing".
-4. Do right click on project and select pristine build and wait about a one minute.
-5. Click run (play icon).
-6. Please wait a few seconds.
-7. Now click stop in center upper button.
+
+### 3.3 Flash your FRDM board Application
+1. Do right click on project "mcxc162-low-power-temperature-sensing" and select pristine build and wait about a one minute.
+2. Click run (play icon).  
+Note:If you are unable to find MCXC162 within your environment after clicking on "Run" or "Play" , please Go to MCUXpresso Installer and software to latest version specifically the Debug Probes, including Linkserver
+3. Please wait a few seconds.
+4. Now click stop in center upper button.
 
 ## 4. Results<a name="step4"></a>
-If you click SW2, the MCU will wake up from low power mode to active mode. The debug console will  print its measured temperature.Then it will sleep.
+If using VS code serial monitor" -> Open serial monitor -> Click on start monitoring and check the COM port is correct. Then when you click on SW2 you should be able to see the temperature reading on the console. 
+
 
 [<p align="left"><img src="./picture/result.png" width="400"/></p>](./picture/result.png)
 
