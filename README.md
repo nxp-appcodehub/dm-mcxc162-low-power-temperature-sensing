@@ -13,7 +13,7 @@ The P3T1755 is a temperature-to-digital converter from -40 °C to +125 °C range
 #### Boards: FRDM-MCXC162
 #### Categories: Low Power
 #### Peripherals: I2C
-#### Toolchains: MCUXpresso IDE, VS code
+#### Toolchains: MCUXpresso IDE, VS Code
 
 ## Table of Contents
 1. [Software](#step1)
@@ -36,7 +36,7 @@ The P3T1755 is a temperature-to-digital converter from -40 °C to +125 °C range
 
 ## 3. Setup<a name="step3"></a>
 ### 3.1 Import project from Application Code Hub
-1. Open VS code, open MCUXpresso for VSCode extension.
+1. Open VS Code, open MCUXpresso for VSCode extension.
 2. In Quick Start Panel window click in Application Code Hub.
 [<p align="left"><img src="./picture/vscode_ach.png" width="400"/></p>]()
 3. In Search text field, type the name of this example "MCXC162 Low Power Temperature Sensing
@@ -56,7 +56,7 @@ Note:If you are unable to find MCXC162 within your environment after clicking on
 4. Now click stop in center upper button.
 
 ## 4. Results<a name="step4"></a>
-If using VS code serial monitor" -> Open serial monitor -> Click on start monitoring and check the COM port is correct. Then when you click on SW2 you should be able to see the temperature reading on the console. 
+If using VS Code serial monitor" -> Open serial monitor -> Click on start monitoring and check the COM port is correct. Then when you click on SW2 you should be able to see the temperature reading on the console. 
 
 
 [<p align="left"><img src="./picture/result.png" width="400"/></p>](./picture/result.png)
